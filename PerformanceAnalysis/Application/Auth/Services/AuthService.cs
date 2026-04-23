@@ -101,7 +101,7 @@ namespace PerformanceAnalysis.Application.Auth.Services
 
             if (user == null)
             {
-                throw new InvalidOperationException("Неверный лин или пароль");
+                throw new InvalidOperationException("Неверный логин или пароль");
             }
 
             if (!BCrypt.Net.BCrypt.Verify(request.Password, user.Passwordhash))
