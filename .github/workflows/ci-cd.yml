@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
 
 env:
-  DOCKER_IMAGE: ${{ secrets.waolizh }}/performance-analysis
+  DOCKER_IMAGE: ${{ secrets.DOCKER_USERNAME }}/performance-analysis
   DOCKER_TAG: ${{ github.sha }}
 
 jobs:
