@@ -9,6 +9,8 @@ on:
 env:
   DOCKER_IMAGE: ${{ secrets.DOCKER_USERNAME }}/performance-analysis
   DOCKER_TAG: ${{ github.sha }}
+  username: ${{ secrets.waolizh }}
+  password: ${{ secrets.hDLEIrQFkwHpvib2KqvOHVo }}
 
 jobs:
   build-and-test:
