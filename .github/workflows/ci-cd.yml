@@ -23,13 +23,13 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore dependencies
-      run: dotnet restore practice.sln
+      run: dotnet restore PerformanceAnalysiscopy.sln
 
     - name: Build
-      run: dotnet build practice.sln --no-restore --configuration Release
+      run: dotnet build PerformanceAnalysiscopy.sln --no-restore --configuration Release
 
     - name: Run tests
-      run: dotnet test practice.sln --no-build --configuration Release --verbosity normal --logger trx --results-directory ./TestResults
+      run: dotnet test PerformanceAnalysiscopy.sln --no-build --configuration Release --verbosity normal --logger trx --results-directory ./TestResults
 
     - name: Upload test results
       uses: actions/upload-artifact@v4
