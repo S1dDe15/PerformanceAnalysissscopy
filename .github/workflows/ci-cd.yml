@@ -9,8 +9,7 @@ on:
 env:
   DOCKER_IMAGE: ${{ secrets.DOCKER_USERNAME }}/performance-analysis
   DOCKER_TAG: ${{ github.sha }}
-  username: ${{ secrets.waolizh }}
-  password: ${{ secrets.hDLEIrQFkwHpvib2KqvOHVo }}
+  
 
 jobs:
   build-and-test:
@@ -56,7 +55,9 @@ jobs:
           with:
             username: ${{ secrets.waolizh }}
             password: ${{ secrets.hDLEIrQFkwHpvib2KqvOHVo }}
-    
+          env:
+            DOCKER_IMAGE: /performance-analysis
+            DOCKER_TAG: ac2e7bb7904f1d4abeac9a9d55339a605f5bee3f
         - name: Build and push Docker image
           uses: docker/build-push-action@v5
           with:
